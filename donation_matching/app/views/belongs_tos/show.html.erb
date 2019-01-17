@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @belongs_to.user_id %>
+</p>
+
+<p>
+  <strong>Student:</strong>
+  <%= @belongs_to.student_id %>
+</p>
+
+<%= link_to 'Edit', edit_belongs_to_path(@belongs_to) %> |
+<%= link_to 'Back', belongs_tos_path %>

@@ -1,0 +1,42 @@
+<%= form_with(model: approval, local: true) do |form| %>
+  <% if approval.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(approval.errors.count, "error") %> prohibited this approval from being saved:</h2>
+
+      <ul>
+      <% approval.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :teacher_id %>
+    <%= form.number_field :teacher_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :donation_id %>
+    <%= form.number_field :donation_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.text_field :status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :notes %>
+    <%= form.text_area :notes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :version %>
+    <%= form.number_field :version %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

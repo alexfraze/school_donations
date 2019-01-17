@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  parent_id: 1
+  donation_date: 2019-01-16
+  teacher_id: 1
+  status: MyString
+  amount: 1.5
+  notes: MyText
+  version: 1
+
+two:
+  parent_id: 1
+  donation_date: 2019-01-16
+  teacher_id: 1
+  status: MyString
+  amount: 1.5
+  notes: MyText
+  version: 1

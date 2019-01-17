@@ -1,0 +1,27 @@
+<%= form_with(model: belongs_to, local: true) do |form| %>
+  <% if belongs_to.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(belongs_to.errors.count, "error") %> prohibited this belongs_to from being saved:</h2>
+
+      <ul>
+      <% belongs_to.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.number_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :student_id %>
+    <%= form.number_field :student_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
